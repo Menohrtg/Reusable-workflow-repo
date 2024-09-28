@@ -1,0 +1,22 @@
+name: "Test"
+run-name: run-hello-world
+on:
+    push:
+        branches: 
+            -main
+            -dev
+    pull_request: 
+        branches: 
+            -main
+            -dev
+    workflow_dispatch: 
+jobs:
+    script-hello:
+        runs-on: windows-latest
+        steps:
+            - name: checkout step
+              uses: actions/checkout@v4
+            - name: run path based script
+              run: |
+                scripts\hellow-world.ps1
+                
