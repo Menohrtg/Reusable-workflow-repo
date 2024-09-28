@@ -1,3 +1,3 @@
 
-$name= "marccelus enoh"
+$name= "Marccelus Enoh"
 Write-Host "Hello World. $name"
