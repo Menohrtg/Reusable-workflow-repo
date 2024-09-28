@@ -22,4 +22,6 @@ jobs:
             - name: Even name
               run: |
                 Write-Host "❤️ this job is automacally triggered by a ${{ github.event_name }} event"
-                
+            - name: Job status 🎈
+              run: |
+                Write-Host "🍏This job's status is ${{job.status}}"
