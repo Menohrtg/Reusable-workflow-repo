@@ -14,12 +14,12 @@ jobs:
     script-hello:
         runs-on: windows-latest
         steps:
-            - name: checkout step
+            - name: 🍏checkout step
               uses: actions/checkout@v4
-            - name: run path based script
+            - name: 🍏run path based script
               run: |
                 scripts\hello-world.ps1
-            - name: Even name
+            - name: 🍏Even name
               run: |
                 Write-Host "❤️ this job is automacally triggered by a ${{ github.event_name }} event"
             - name: Job status 🎈
