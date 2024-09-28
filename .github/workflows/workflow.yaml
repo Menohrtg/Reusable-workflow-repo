@@ -25,3 +25,6 @@ jobs:
             - name: Job status 🎈
               run: |
                 Write-Host "🍏This job's status is ${{job.status}}"
+            - name: List file in the repository
+              run: |
+                ls ${{github.workspace}}
