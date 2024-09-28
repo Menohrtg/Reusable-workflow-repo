@@ -27,4 +27,4 @@ jobs:
                 Write-Host "🍏This job's status is ${{job.status}}"
             - name: 🍏List file in the repository
               run: |
-                ls ${{github.workspace}}
+                dir ${{github.workspace}}
