@@ -28,3 +28,4 @@ jobs:
             - name: 🖥️List file in the repository
               run: |
                 dir ${{github.workspace}}
+                Write-Host "name of Githubactor: ${{github.actor}}"
