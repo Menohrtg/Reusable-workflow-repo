@@ -21,5 +21,5 @@ jobs:
                 scripts\hello-world.ps1
             - name: Even name
               run: |
-                Write-Host "❤️ this job is automacally triggered by a $($env:GITHUB_EVENT_NAME)"
+                Write-Host "❤️ this job is automacally triggered by a ${{ github.event_name }} event"
                 
