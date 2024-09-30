@@ -34,4 +34,4 @@ jobs:
                 Write-Host " the sha is : ${{github.sha}}"
             - name: 🍏sha in powershell
               run: |
-               Write-Host " this is the sha $env:GITHUB_SHA"
+               Write-Host " this is the sha $($env:GITHUB_SHA)"
