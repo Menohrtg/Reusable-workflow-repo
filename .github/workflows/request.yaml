@@ -13,7 +13,7 @@ jobs:
         steps:
             - name: 🍏checkout step
               uses: actions/checkout@v4
-            - name: 🍏run path based script
+            - name: 🍏🎯run path based script
               run: |
                 scripts\requested.ps1
     
