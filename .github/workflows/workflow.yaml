@@ -1,0 +1,40 @@
+name: "Test"
+run-name: run-hello-world
+on:
+    # push:
+    #     branches: 
+    #         - main
+    #         - dev
+    # pull_request: 
+    #     branches: 
+    #         - main
+    #         - dev
+    workflow_dispatch: 
+jobs:
+    script-hello:
+        runs-on: windows-latest
+        steps:
+            - name: 🍏checkout step
+              uses: actions/checkout@v4
+            - name: 🍏run path based script
+              run: |
+                scripts\hello-world.ps1
+            - name: 🍏Even name
+              run: |
+                Write-Host "❤️ this job is automacally triggered by a ${{ github.event_name }} event"
+            - name: Job status 🎈
+              run: |
+                Write-Host "🍏This job's status is ${{job.status}}"
+            - name: 🖥️List file in the repository
+              run: |
+                dir ${{github.workspace}}
+                Write-Host "name of Githubactor: ${{github.actor}}"
+            - name: 🦋🍉show gitsha
+              run: |
+                Write-Host " the sha is : ${{github.sha}}"
+            - name: 🍏sha in powershell
+              run: |
+               Write-Host " this is the sha $($env:GITHUB_SHA)"
+            - name: 🍏GITHUB_TOKEN in powershell
+              run: |
+               Write-Host " this is the sha $($env:GITHUB_TOKEN)"

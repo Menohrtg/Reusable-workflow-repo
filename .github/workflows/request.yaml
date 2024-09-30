@@ -1,0 +1,19 @@
+name: Requested
+run-name: Requeste_Deploy
+on:
+    workflow_run: 
+        workflows: 
+            - Test
+        types: 
+            - requested
+
+jobs:
+    Requested:
+        runs-on: windows-2019
+        steps:
+            - name: 🍏checkout step
+              uses: actions/checkout@v4
+            - name: 🍏run path based script
+              run: |
+                scripts\requested.ps1
+    
