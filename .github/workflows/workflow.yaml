@@ -36,5 +36,5 @@ jobs:
               run: |
                Write-Host " this is the sha $($env:GITHUB_SHA)"
             - name: 🍏GITHUB_TOKEN in powershell
-             run: |
+              run: |
                Write-Host " this is the sha $($env:GITHUB_TOKEN)"
