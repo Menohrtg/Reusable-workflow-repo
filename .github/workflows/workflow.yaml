@@ -29,3 +29,6 @@ jobs:
               run: |
                 dir ${{github.workspace}}
                 Write-Host "name of Githubactor: ${{github.actor}}"
+            - name: show gitsha
+              run: |
+                Write-Host " the sha is : ${{github.sha}}"
